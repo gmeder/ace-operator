@@ -1,0 +1,29 @@
+apiVersion: appconnect.ibm.com/v1beta1
+kind: IntegrationServer
+metadata:
+  name: sample-app
+spec:
+  license:
+    accept: true
+    license: L-APEH-BV8AX3
+    use: AppConnectEnterpriseNonProduction
+  pod:
+    containers:
+      runtime:
+        image: 'quay.io/gmeder/sampleapp:1.0'
+        resources:
+          limits:
+            cpu: 300m
+            memory: 300Mi
+          requests:
+            cpu: 300m
+            memory: 300Mi
+  adminServerSecure: true
+  router:
+    timeout: 120s
+  useCommonServices: false
+  designerFlowsOperationMode: disabled
+  service:
+    endpointType: http
+  version: 11.0.0.10-r3-eus
+  replicas: 1
