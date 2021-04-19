@@ -6,7 +6,7 @@ CREATE COMPUTE MODULE SetResponse
 		-- CALL CopyMessageHeaders();
 		-- CALL CopyEntireMessage();
 		SET OutputRoot.HTTPRequestHeader."Content-Type" = 'application/json';
-		SET OutputRoot.JSON.Data.Message = 'World';
+		SET OutputRoot.JSON.Data.Message = 'Hello World - App';
 		RETURN TRUE;
 	END;
 
