@@ -10,7 +10,7 @@ spec:
   pod:
     containers:
       runtime:
-        image: 'quay.io/gmeder/sampleapp:1.0'
+        image: 'quay.io/gmeder/sampleapp:latest'
         resources:
           limits:
             cpu: 300m
